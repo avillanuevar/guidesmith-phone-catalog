@@ -1,0 +1,11 @@
+.App {
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+}
+
+.hide-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
