@@ -9,6 +9,10 @@ const phoneSchema = new Schema(
     imageUrl: String,
     description: String,
     price: Number,
+    simStatus: String,
+    memory: Number,
+    screen: String,
+    processor: String
   },
   {
     timestamps: true

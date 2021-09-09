@@ -1,0 +1,27 @@
+.navbarGS {
+    height: 60px;
+    background-color: #121212;
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.56);
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.stebBack {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    width: 24px;
+}
+
+.navbar-title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.navbar-title h2{
+    margin: 0;
+}

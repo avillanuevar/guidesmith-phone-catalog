@@ -3,7 +3,7 @@ const phoneRoutes = express.Router();
 const Phone = require("../models/Phone.model");
 
 
-phoneRoutes.get('/', (req, res) => {
+phoneRoutes.get('/getAllPhones', (req, res) => {
     Phone.find()
         .then(allPhones => res.json(allPhones))
         .catch(err => console.log('DB error', err))
@@ -12,21 +12,29 @@ phoneRoutes.get('/', (req, res) => {
 
 phoneRoutes.post("/create", (req, res) => {
   const {
-    name,
-    manufacturer,
     color,
-    imageUrl,
     description,
+    manufacturer,
+    name,
     price,
+    simStatus,
+    memory,
+    imageUrl,
+    screen,
+    processor 
   } = req.body;
 
   Phone.create({
-    name,
-    manufacturer,
     color,
-    imageUrl,
     description,
+    manufacturer,
+    name,
     price,
+    simStatus,
+    memory,
+    imageUrl,
+    screen,
+    processor
   })
     .then(phone => {
         res.json(phone);
@@ -36,19 +44,27 @@ phoneRoutes.post("/create", (req, res) => {
 
 phoneRoutes.get("/details/:id", (req, res) => {
   const phoneId = req.params.id;
+  console.log(phoneId);
   Phone.findById(phoneId)
-    .then(phone => res.json(phone))
+    .then(phone => {
+      console.log(phone, 'phone');
+      res.json(phone)
+    })
     .catch(err => console.log("DB error", err));
 });
 
 phoneRoutes.post("/edit/:id", (req, res) => {
   const {
-    name,
-    manufacturer,
     color,
-    imageUrl,
     description,
+    manufacturer,
+    name,
     price,
+    simStatus,
+    memory,
+    imageUrl,
+    screen,
+    processor
   } = req.body;
 
   const phoneId = req.params.id;
@@ -56,12 +72,16 @@ phoneRoutes.post("/edit/:id", (req, res) => {
   Phone.findByIdAndUpdate(
     phoneId,
     {
-        name,
-        manufacturer,
-        color,
-        imageUrl,
-        description,
-        price,
+      color,
+      description,
+      manufacturer,
+      name,
+      price,
+      simStatus,
+      memory,
+      imageUrl,
+      screen,
+      processor
     },
     { new: true }
   )

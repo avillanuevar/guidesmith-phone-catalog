@@ -1,0 +1,75 @@
+.device-card {
+    background-color: #FFFFFF;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.5);
+    border-radius: 1.2rem;
+    margin: 16px;
+    overflow: hidden;
+}
+
+.device-card-info  {
+    padding: 16px 16px 8px;
+}
+
+.device-card-image {
+    width: 100px;
+    padding: 24px 40px;
+}
+
+.device-card-text {
+    text-align: start;
+    margin-top: 16px;
+}
+
+.device-card-title {
+    color: #111;
+    font-size: large;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.device-card-specs {
+    color: #222;
+    font-weight: 300;
+    margin: 0;
+}
+
+.card-price-title {
+    color: #222;
+    font-weight: 300;
+    margin: 16px 0 0;
+}
+
+.card-price {
+    color: #111;
+    font-weight: 600;
+    margin: 8px 0 0;
+}
+
+.card-button-group {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-button {
+    height: 40px;
+    width: 107px;
+    color: white;
+}
+
+.delete {
+    background-color: #ff0000b5;
+}
+
+.add {
+    background-color: #0000ffbf;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
